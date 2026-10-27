@@ -47,3 +47,16 @@ jobs:
           node-version: '22'
       - name: Public Workers page, health and actual deployed FIRE / HOLD
         run: node scripts/smoke-deployed.mjs
+
+  linked-worker-end-to-end:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify Git-connected threshold-guardian Worker using real MCP
+        env:
+          GUARDIAN_BASE_URL: https://threshold-guardian.trantanlong2411.workers.dev
+        run: node scripts/smoke-deployed.mjs
