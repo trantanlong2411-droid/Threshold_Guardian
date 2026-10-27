@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-const base = process.env.GUARDIAN_BASE_URL || 'https://pharos-threshold-guardian.trantanlong2411.workers.dev';
+const base = process.env.GUARDIAN_BASE_URL || 'https://threshold-guardian.trantanlong2411.workers.dev';
 const wallet='0x51e2A24742Db77604B881d6781Ee16B5b8fcBE29';
 const config={wallet,token:wallet,minPros:'0',minToken:'0',maxGasGwei:'100000'};
 async function req(path, init={}) {

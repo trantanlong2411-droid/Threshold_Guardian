@@ -1,6 +1,6 @@
 # Threshold Guardian — Pharos Agent Arena
 
-**Live deployed website / primary reviewer proof:** https://pharos-threshold-guardian.trantanlong2411.workers.dev/
+**Live deployed website / primary reviewer proof (Git-integrated Worker):** https://threshold-guardian.trantanlong2411.workers.dev/
 
 **Automated public site verification:** https://github.com/trantanlong2411-droid/Threshold_Guardian/actions/workflows/verify.yml
 
@@ -33,7 +33,7 @@ This repository is connected to the **Cloudflare Worker named `threshold-guardia
 - **Build command:** leave empty for this pure Worker
 - **Deploy command:** `npx wrangler deploy`
 
-Inspect the `Workers Builds: threshold-guardian` GitHub commit check for the actual deployment status. The successful CLI integration and old deployed site do not, by themselves, confirm deployment to the **new** Worker. Find its confirmed production URL under Cloudflare **Domains & Routes**. The previous manually deployed proof site remains at https://pharos-threshold-guardian.trantanlong2411.workers.dev/ until you choose to retire it.
+Inspect the `Workers Builds: threshold-guardian` GitHub commit check for the actual deployment status. The successful CLI integration and old deployed site do not, by themselves, confirm deployment to the **new** Worker. Find its confirmed production URL under Cloudflare **Domains & Routes**. The new Git-linked Worker has been verified with public HTTP checks for both live **FIRE** and **HOLD**: https://threshold-guardian.trantanlong2411.workers.dev/. The old manually deployed site remains separate at https://pharos-threshold-guardian.trantanlong2411.workers.dev/, and is not the primary submission URL.
 
 ## Windows quick start (PowerShell)
 
@@ -82,7 +82,7 @@ npx.cmd wrangler login
 npm.cmd run deploy
 ```
 
-Copy the resulting `https://...workers.dev` address into **PROOF LINK**. The Worker always reads Pharos state server-side; its authorization signal never broadcasts a transaction.
+The Git-linked deployment is already available at [https://threshold-guardian.trantanlong2411.workers.dev/](https://threshold-guardian.trantanlong2411.workers.dev/). Use it as **PROOF LINK**. The Worker always reads Pharos state server-side; its authorization signal never broadcasts a transaction.
 
 ## Submission notes (English)
 
