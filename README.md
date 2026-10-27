@@ -20,6 +20,21 @@ This skill fetches real Pharos state, evaluates three checks together and emits 
 
 The `get_chain_info` result MUST confirm mainnet chain ID **1672**. ERC-20 data is pinned to a block read from `get_block_number`. Gas price is read at request time. Missing reads or invalid input produce an **ERROR** and *never* FIRE. All numeric computations use `BigInt`.
 
+
+## Cloudflare Workers Builds (Git-linked `threshold-guardian` Worker)
+
+This repository is connected to the **Cloudflare Worker named `threshold-guardian`**, which is separate from the older manually deployed `pharos-threshold-guardian` Worker. The checked-in `wrangler.jsonc` intentionally uses `"name": "threshold-guardian"` to match the connected Worker exactly.
+
+**Automatic deployment:** Each push to `main` triggers Cloudflare Workers Builds. In Cloudflare dashboard, open **Workers & Pages → threshold-guardian → Settings → Builds** and verify:
+
+- **Git repository:** `trantanlong2411-droid/Threshold_Guardian`
+- **Production branch:** `main`
+- **Root directory:** `/`
+- **Build command:** leave empty for this pure Worker
+- **Deploy command:** `npx wrangler deploy`
+
+Inspect the `Workers Builds: threshold-guardian` GitHub commit check for the actual deployment status. The successful CLI integration and old deployed site do not, by themselves, confirm deployment to the **new** Worker. Find its confirmed production URL under Cloudflare **Domains & Routes**. The previous manually deployed proof site remains at https://pharos-threshold-guardian.trantanlong2411.workers.dev/ until you choose to retire it.
+
 ## Windows quick start (PowerShell)
 
 ```powershell
