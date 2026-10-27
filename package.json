@@ -1,0 +1,16 @@
+{
+  "name": "pharos-threshold-guardian",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=20"},
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "run": "node bin/guardian.mjs --mode manual",
+    "fire": "node bin/guardian.mjs --mode fire --out proof/fire.json",
+    "hold": "node bin/guardian.mjs --mode hold --out proof/hold.json",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {"@modelcontextprotocol/sdk": "^1.0.0"},
+  "devDependencies": {"wrangler": "^4.0.0"}
+}
