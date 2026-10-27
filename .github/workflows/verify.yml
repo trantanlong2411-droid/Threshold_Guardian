@@ -37,3 +37,13 @@ jobs:
           name: threshold-guardian-pharos-mcp-evidence
           path: proof/*.json
           if-no-files-found: warn
+  deployed-website-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Public Workers page, health and actual deployed FIRE / HOLD
+        run: node scripts/smoke-deployed.mjs

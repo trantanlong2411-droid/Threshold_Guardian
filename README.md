@@ -1,5 +1,12 @@
 # Threshold Guardian — Pharos Agent Arena
 
+**Live deployed website / primary reviewer proof:** https://pharos-threshold-guardian.trantanlong2411.workers.dev/
+
+**Automated public site verification:** https://github.com/trantanlong2411-droid/Threshold_Guardian/actions/workflows/verify.yml
+
+**Repository:** https://github.com/trantanlong2411-droid/Threshold_Guardian
+
+
 **100-point skill** · Pharos Mainnet · Live Pharos MCP · Three independent on-chain conditions · FIRE / HOLD · Read-only
 
 This skill fetches real Pharos state, evaluates three checks together and emits a reviewer-friendly decision trace. It **does not send transactions**, hold private keys, or claim that demo fixtures are on-chain evidence.
